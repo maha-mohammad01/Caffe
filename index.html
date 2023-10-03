@@ -25,16 +25,43 @@ switch (gender.toLowerCase()) {
     break;
 }*/
 
-         /* enter your gender ex2*/
+         /* enter your gender ex2 using function */
 
+         function gender(g) { 
+         
+          while (g !== "male" || g !== "female") 
+           {        
+           gender = prompt("What is your gender?");  
+             let check = gender.toLowerCase();     
+              if (check === "male") {         
+               alert("Welcome Mr " + user_name);   
+          break;      
+          }
+          else if (check === "female") {   
+          alert("Welcome Ms " + user_name);   
+          break;       
+         } else {
+           alert("Invalid input. Please enter 'male' or 'female'."); 
+        }   
+        } }
+let g = gender();
+
+
+
+
+
+
+
+
+
+         /*
 let gender = "";
 
 while (gender !== "male" && gender !== "female") {
   gender = prompt("Please enter your gender (male, female):");
 }
 
-console.log("You entered the correct gender: " + gender);
- /* enter you drinking: cold or hot */
+console.log("You entered the correct gender: " + gender);*/
  var drink =(prompt("What are you drinking: cold or hot?"))
 switch (drink.toLowerCase()){
 case"cold" :
