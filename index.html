@@ -7,7 +7,8 @@
 
     <body>
         <script>
-         /* enter your name */
+          
+         /* enter your name 
 var name = ( prompt("Enter your name", "a") );
 
          /* enter your gender ex1
@@ -25,43 +26,17 @@ switch (gender.toLowerCase()) {
     break;
 }*/
 
-         /* enter your gender ex2 using function */
-
+         /* enter your gender ex2 using function 
+         let g = gender();
          function gender(g) { 
          
-          while (g !== "male" || g !== "female") 
-           {        
-           gender = prompt("What is your gender?");  
-             let check = gender.toLowerCase();     
-              if (check === "male") {         
-               alert("Welcome Mr " + user_name);   
-          break;      
-          }
-          else if (check === "female") {   
-          alert("Welcome Ms " + user_name);   
-          break;       
-         } else {
-           alert("Invalid input. Please enter 'male' or 'female'."); 
-        }   
-        } }
-let g = gender();
+     
+while (g !== "male" && g !== "female") {
+  g = prompt("Please enter your gender (male, female):");
+}}
+console.log("You entered the correct gender: " + gender);
+      
 
-
-
-
-
-
-
-
-
-         /*
-let gender = "";
-
-while (gender !== "male" && gender !== "female") {
-  gender = prompt("Please enter your gender (male, female):");
-}
-
-console.log("You entered the correct gender: " + gender);*/
  var drink =(prompt("What are you drinking: cold or hot?"))
 switch (drink.toLowerCase()){
 case"cold" :
@@ -79,9 +54,98 @@ order.push(name,gender,drink,favdrink)
 document.write("welcome\n\n"+(name)+"\n\nThis is your favorite drink\n\n"+(favdrink));
 
 console.log(order);
+*/
 
+
+
+
+
+
+let dev = document.getElementById("Div");
+let p = document.createElement("p");
+let ul = document.createElement("ul");
+let li1 = document.createElement("li");
+let li2 = document.createElement("li");
+let li3 = document.createElement("li");
+
+let userName = document.querySelector("input[name = uname]");
+let age = document.querySelector("input[name = age]");
+let drink = document.querySelector("input[name = drink]");
+
+postData.preventDefault();
+let button = document.querySelector("send");
+button.addEventListener("click", function (postData){
+  
+    p.innerHTML = uname.value;
+    li1.innerHTML = age.value;
+    if (document.querySelector("input[name = hot]").radio){
+        li2.innerHTML = "hot";
+    } else if (document.querySelector("input[name = cold]").radio){
+        li2.innerHTML = "cold";
+    }
+    li3.innerHTML = drink.value;
+});
+
+ul.appendChild(li1);
+ul.appendChild(li2);
+ul.appendChild(li3);
+
+dev.appendChild(p);
+dev.appendChild(ul);
+document.body.appendChild(dev);
+document.write
 
         </script>
+
+
+
+
+
+
+<div id="container">
+  <form action="">
+
+<table>
+
+    <tr>
+      <td><label for="uname">Username</label></td>
+      <td><input type="text" name="uname" id="uname"></td>
+  </tr>
+
+
+    
+      <tr>
+      <td><label for="age">age</label></td>
+     <td><input type="text" name="age"></td>
+      </tr>
+
+
+      <tr>
+        <td><label>drink</label></td>
+        <td>
+            <input type="radio" name="drink" id="hot"  checked>
+            <label for="hot">HOT</label>
+            <input type="radio" name="drink" id="cold" >
+            <label for="cold">COLD</label> 
+        </td>
+    </tr>
+    <tr>
+    <td>
+      <button type="submit">send</button>
+  </td>
+</tr>
+</table>
+  </form>
+  </div>
+
+
+
+
+
+
+
+
+
 
     </body>
    
